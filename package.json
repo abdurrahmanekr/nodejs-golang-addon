@@ -5,7 +5,7 @@
   "main": "main.js",
   "author": "Abdurrahman Eker <abdurrahmaneker58@gmail.com>",
   "license": "MIT",
-  "script": {
+  "scripts": {
     "electron:start": "electron .",
     "build": "go build -o awesome-lib.so -buildmode=c-shared awesome-lib.go && node-gyp rebuild"
   },
