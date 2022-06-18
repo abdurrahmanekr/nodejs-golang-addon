@@ -1,5 +1,18 @@
 {
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Node.js'e Go Eklentisi Yazmak",
+  "main": "main.js",
+  "author": "Abdurrahman Eker <abdurrahmaneker58@gmail.com>",
+  "license": "MIT",
+  "script": {
+    "electron:start": "electron .",
+    "build": "go build -o awesome-lib.so -buildmode=c-shared awesome-lib.go && node-gyp rebuild"
+  },
   "dependencies": {
     "node-addon-api": "^5.0.0"
+  },
+  "devDependencies": {
+    "electron": "^17.4.7"
   }
 }

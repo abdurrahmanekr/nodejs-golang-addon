@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <div>Do High CPU Job: <button onclick="work();">JOB</button></div>
+
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        function work() {
+            const AwesomeLib = require('./build/Release/awesome-lib');
+
+            const div = document.getElementById('result');
+
+            AwesomeLib.awesomeJob(4, (log) => {
+                div.innerHTML += `<p>${log}</p>`;
+            })
+            .then(res => {
+                div.innerHTML += `<p>iş bitti sonuç: ${res}</p>`;
+            });
+        }
+
+    </script>
+</body>
+</html>
